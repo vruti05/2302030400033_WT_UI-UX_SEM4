@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Log<br>In</h1>
+        </div>
+        <div class="right-section">
+            <form class="login-form">
+                <input type="text" placeholder="User name or Email ID" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Password" id="password" required>
+                    <span class="toggle-password" onclick="togglePassword()">👁</span>
+                </div>
+                <a href="#" class="forgot-password">Forgotten password?</a>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
